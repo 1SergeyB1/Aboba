@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>CodePen - Interactive Loose-Leaf Todo List</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+{% endblock %}
+
+{% block body %}
+<h1>Таблица созданных страниц</h1>
+<div class="paper">
+	<div class="lines">
+		<div contenteditable>
+			<strong>Список созданных страниц</strong>
+			<ul>
+				{% for i in pages_name %}
+        			<li><a href = "/{{ i[0] }}" style="text-decoration: none;color:black;">{{i[1]}}</a></li>
+        		{%endfor%}
+			</ul>
+		</div>
+	</div>
+	<div class="holes">
+		<div class="hole"></div>
+		<div class="hole"></div>
+		<div class="hole"></div>
+	</div>
+</div>
+{% endblock %}

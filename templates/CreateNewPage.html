@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Создать новую страницу</title>
+{% endblock %}
+
+{% block body %}
+<form method="post">
+<h1>Название страницы </h1><input type="text" name="name" id="name"><br>
+<h1>Картинка для header </h1><input type="text" name="image" id="image"><br>
+<h1>Текст header </h1><input type="text" name="header" id="header"><br>
+<h1>Основной текст </h1><input type="text" name="content" id="content"><br>
+<h1>Текст footer </h1><input type="text" name="footer" id="footer"><br>
+<br>
+<button type="submit">Создать</button><br>
+</form>
+{% endblock %}

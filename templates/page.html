@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>{{content.name}}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="sample-header" style="background-image: url('{{content.image}}');" >
+  <div class="sample-header-section">
+    {{content.header}}
+  </div>
+</div>
+
+<div class="sample-section-wrap">
+  <div class="sample-section">
+    <h1>{{content.content}}</h1>
+  </div>
+</div>
+
+
+
+<div class="footer">
+  <div id="button"></div>
+  <div id="container">
+    <div id="cont">
+      <div class="footer_center">
+           <h3>{{content.footer}}</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='javascript/ForScrolller.js') }}"></script><script src="{{ url_for('static', filename='javascript/Scrolller.js') }}"></script>
+{% endblock %}
